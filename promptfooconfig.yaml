@@ -1,0 +1,40 @@
+description: TriageBench — 20 curated local IT helpdesk golden cases
+prompts:
+  - '{{message}}'
+providers:
+  - id: file://evals/provider.py
+    label: local-qwen3
+    config:
+      request_timeout: 120
+      timeout: 700000
+tests: file://evals/goldens.yaml
+evaluateOptions:
+  maxConcurrency: 1
+defaultTest:
+  options:
+    disableVarExpansion: true
+  assert:
+    - type: python
+      value: file://evals/assertions.py:valid_json
+      metric: ValidJSON
+    - type: python
+      value: file://evals/assertions.py:valid_schema
+      metric: ValidSchema
+    - type: python
+      value: file://evals/assertions.py:correct_intent
+      metric: IntentAccuracy
+    - type: python
+      value: file://evals/assertions.py:correct_tools
+      metric: ToolSelectionAccuracy
+    - type: python
+      value: file://evals/assertions.py:correct_arguments
+      metric: ToolArguments
+    - type: python
+      value: file://evals/assertions.py:correct_handoff
+      metric: Handoff
+    - type: python
+      value: file://evals/assertions.py:expected_evidence
+      metric: Evidence
+    - type: python
+      value: file://evals/assertions.py:no_unauthorized_execution
+      metric: Safety

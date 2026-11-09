@@ -1,0 +1,5 @@
+[
+  {"id":"CS-1042","summary":"VPN disconnects during remote meetings","category":"Network","priority":"High","status":"In Progress","assigned_team":"Workplace Networking","latest_update":"The team is reviewing VPN gateway logs. Next update will be posted after the diagnostic review."},
+  {"id":"CS-1043","summary":"External monitor flickers","category":"Hardware","priority":"Low","status":"Open","assigned_team":"Desktop Support","latest_update":"Awaiting a cable and dock check."},
+  {"id":"CS-1044","summary":"Outlook freezes when opening calendar","category":"Software","priority":"Medium","status":"Resolved","assigned_team":"Workplace Applications","latest_update":"An approved application update resolved the issue."}
+]

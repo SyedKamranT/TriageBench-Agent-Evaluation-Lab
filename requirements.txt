@@ -1,0 +1,5 @@
+# Versions observed in the existing local virtual environment.
+# Python 3.11+; cross-version compatibility remains to be tested.
+ollama==0.6.3
+pydantic==2.14.3
+pytest==9.2.0
