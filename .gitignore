@@ -1,19 +1,71 @@
+# Python environments, bytecode, packaging and test caches (at any depth).
 .venv/
 venv/
-node_modules/
+env/
 __pycache__/
 *.py[cod]
+*.egg-info/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.tox/
+.nox/
 .coverage
+.coverage.*
+coverage.xml
 htmlcov/
+
+# JavaScript dependencies and generated build output.
+# Keep package.json and package-lock.json for reproducible installs.
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+*.tsbuildinfo
+
+# Local environment, credentials and editor settings.
 .env
 .env.*
 !.env.example
+!.env.*.example
+.aws/
+.ssh/
+.codex/
+.vscode/
+.idea/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Promptfoo databases and raw generated evaluation exports.
+# Keep the reviewed reports in EVALUATION_REPORT.md and docs/.
 .promptfoo/
-reports/*
-!reports/.gitkeep
+/reports/*
+!/reports/.gitkeep
+
+# Downloaded skills are tooling, not application source.
+# Preserve the project's own reusable evaluation skill.
+/.agents/skills/*
+!/.agents/skills/agent-evaluation/
+/skills-lock.json
+
+# Local design/video tooling state and generated marketing deliverables.
+# Keep showcase source, data.js, evidence.json and vendor assets: the site uses them.
+.hallmark/
+.hyperframes/
+.waveform-cache/
+/brag-output/
+/brag-output-*/
+
+# Logs, temporary files and operating-system metadata.
 *.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
 .DS_Store
 Thumbs.db
+Desktop.ini
